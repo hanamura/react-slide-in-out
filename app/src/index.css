@@ -1,3 +1,8 @@
 body {
+  font-family: 'Inter';
+  font-size: 300%;
+  line-height: 1;
   margin: 0;
+  padding: 2rem;
+  text-transform: uppercase;
 }

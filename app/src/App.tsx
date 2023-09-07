@@ -1,5 +1,22 @@
-import { Button } from '../../src/Button'
+import { useEffect, useState } from 'react'
+
+import { SlideInOut } from '../../src/SlideInOut'
 
 export const App = () => {
-  return <Button type="primary">Click me</Button>
+  const [active, setActive] = useState(false)
+
+  useEffect(() => {
+    const onClick = () => setActive((active) => !active)
+    document.addEventListener('click', onClick)
+    return () => document.removeEventListener('click', onClick)
+  }, [])
+
+  return (
+    <SlideInOut active={active}>
+      <>Water </>
+      <>Sugar </>
+      <>Salt </>
+      <>Pepper</>
+    </SlideInOut>
+  )
 }
