@@ -12,11 +12,22 @@ export const App = () => {
   }, [])
 
   return (
-    <SlideInOut active={active}>
-      <>Water </>
-      <>Sugar </>
-      <>Salt </>
-      <>Pepper</>
-    </SlideInOut>
+    <>
+      <SlideInOut active={active}>
+        <>Water </>
+        <>Sugar </>
+        <>Salt </>
+        <>Pepper</>
+      </SlideInOut>
+
+      <div style={{ blockSize: '1em' }} />
+
+      <SlideInOut active={active} beltStyle={{ color: 'crimson' }}>
+        <>Water </>
+        <>Sugar </>
+        <>Salt </>
+        <>Pepper</>
+      </SlideInOut>
+    </>
   )
 }
